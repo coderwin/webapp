@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#id").on("keyup", function () {
+                let idValue = $("#id").val(); // val() 메서드의 아무 매개변수도 주지 않는다면 getter의 역할을 한다
+                let str = "";
+                if (idValue.length <= 3) {
+                    str = "4글자 이상의 글자를 입력하세요.";
+                } else {
+                    if (idValue === "java") {
+                        str = "이미 사용중인 아이디입니다.";
+                    } else {
+                        str = "사용 가능한 아이디입니다.";
+                    }
+                }
+                $("#result").text(str);
+            });
+        });
+    </script>
 </head>
 <body>
 <h1>티몬 회원가입</h1>
@@ -12,17 +31,6 @@
     아이디 : <input type="text" id="id">
 </form>
 <!--<div id="warning" style="color: red">아이디는 4글자 이상이어야 합니다.</div>-->
-<script>
 
-    let data = $("<div id=\"warning\" style=\"color: red\">아이디는 4글자 이상이어야 합니다.</div>");
-
-    $(document).ready(function () {
-        let idCheck = $("#id").val();
-
-        if (idCheck.length <= 3) {
-            $("#signup_form").append(data);
-        }
-    });
-</script>
 </body>
 </html>
