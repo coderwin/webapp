@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_event_test</title>
+    <script>
+        function calc() {
+            let mytext1 = document.getElementById("num1");
+            console.log(mytext1.value);
+        }
+
+        function changeColor(mytext) {
+            console.log(mytext);
+            mytext.background = 'tomato';
+        }
+    </script>
+</head>
+<body>
+<!--텍스트 상자에서 입력한 내용이 웹페이지에 출력되도록 작업-->
+<div id="result" style="color: red; font-weight: bold;">
+
+</div>
+<form>
+    <input type="text" id="num1" onclick="changeColor(this)">
+    <input type="text" id="num2" onclick="changeColor(this)">
+    <input type="text" id="num3" onclick="changeColor(this)">
+    <input type="text" id="num4" onclick="changeColor(this)">
+    <input type="button" value="전송1" onkeyup="calc()">
+</form>
+<!--마우스 관련-->
+<img alt="BTS" src="../images/daumlogo.png"
+     width="300px" name="myimg" onmouseover="myimg.src='../images/jang1.jpg'"
+     onmouseout="myimg.src='../images/daumlogo.png'">
+</body>
+</html>

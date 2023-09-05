@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table, td {
+        border: solid 1px black;
+        border-collapse: collapse;
+    }
+</style>
+<body>
+<script>
+    var memCount = prompt("입장객은 몇명인가요?");
+    var lineMemCount = prompt("한줄에 몇명씩 앉습니까?");
+
+    var lineCount = Math.floor(memCount / lineMemCount);
+
+    document.write(`<table>`);
+    for (var i = 0; i < lineCount; i++) {
+        document.write(`<tr>`);
+        for (var j = 1; j < lineMemCount; j++) {
+            var seatNumber = i * lineMemCount + j;
+            if (seatNumber >= memCount) {
+                break;
+            }
+            document.write(`<td>좌석번호:${seatNumber} </td>`);
+        }
+        document.write(`</tr>`);
+    }
+    document.write(`</table>`);
+</script>
+</body>
+</html>
