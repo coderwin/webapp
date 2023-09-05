@@ -1,0 +1,35 @@
+@charset "UTF-8";
+body{
+	font-size: 9pt;	
+}
+h1{
+	color: #399195;
+
+}
+#outer{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#garden{
+	background-image: url("../../images/background.gif");
+	background-repeat: no-repeat;
+	background-color: 	#399195;
+	border: solid 1px white;
+	width: 1200px;
+	height: 70px;
+	margin: 20px;
+	padding: 20px;
+	padding-left: 80px;
+	overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+

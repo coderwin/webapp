@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>var_error_test</title>
+</head>
+<body>
+<script>
+    function test() {
+        console.log("num = " + num);
+        let num = 10;
+        console.log(`num = ${num}`);
+
+        /**
+         * 문제 상황
+         * num이라는 변수가 선언되지 않았음에도 정상적으로 사용이 된다는 것이 문제다
+         * 자바스크립트는 위에서부터 아래로 훑고 내려오는 인터프리터 언어기에 위 문제는 문제다.
+         */
+    }
+    test();
+
+    /**
+     * 문제 상황
+     * 지역변수지만 해당 함수 밖에서 사용이 가능하다.
+     */
+    for (let i = 1; i < 10; i++) {  // let으로 사용하면 로컬변수로 선언이 되기 때문에 좋다.
+        console.log("i = " + i);
+    }
+    console.log("===========================");
+    console.log("i = " + i);
+
+    /**
+     * 문제 상황
+     * var 키워드를 이용하면 동일한 변수명을 사용해서 변수를 사용할 수 있다.
+     */
+
+    let sum = 100;
+    console.log("sum = " + sum);
+    sum = "test";
+
+    let sum = "javascript";
+    console.log("sum = " + sum);
+
+    const data = "test";
+    data = "javascript";
+    console.log("data = " + data);
+
+
+</script>
+</body>
+</html>

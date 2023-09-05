@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        border: 1px solid #444444;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #444444;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <td style="text-align: center" colspan="2">회원가입</td>
+    </tr>
+    <tr>
+        <td>이름</td>
+        <td><input type="text" name="name"></td>
+    </tr>
+    <tr>
+        <td>사용자 아이디</td>
+        <td><input type="text" name="id"></td>
+    </tr>
+    <tr>
+        <td>암호</td>
+        <td><input type="password" name="password"></td>
+    </tr>
+    <tr>
+        <td>암호 확인</td>
+        <td><input type="password" name="password-check"></td>
+    </tr>
+    <tr>
+        <td>주민등록번호</td>
+        <td><input type="text" maxlength="6" name="identity-code">-
+            <input type="password" maxlength="7" name="identity-code-b"></td>
+    </tr>
+    <tr>
+        <td>전화번호</td>
+        <td>
+            <input type="text" maxlength="3" name="tel1">-
+            <input type="text" maxlength="4" name="tel2">-
+            <input type="text" maxlength="4" name="tel3">
+        </td>
+    </tr>
+    <tr>
+        <td>성별</td>
+        <td>
+            <input type="radio" name="gender">여자
+            <input type="radio" name="gender">남자
+        </td>
+    </tr>
+    <tr>
+        <td>직업</td>
+        <td>
+            <select name="job">
+                <option value="0" selected>선택해주세요.</option>
+                <option value="1">웹디자이너</option>
+                <option value="2">개발자</option>
+                <option value="3">빅데이터 개발자</option>
+                <option value="4">임베디드 개발자</option>
+                <option value="5">DBA</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>이메일</td>
+        <td>
+            <input type="email"
+                   id="email"
+                   pattern=".+@gmail\.com"
+                   placeholder="example@gmail.com"
+                   required>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align: center" colspan="2">
+            <button type="submit">가입</button>
+            <button type="reset">취소</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

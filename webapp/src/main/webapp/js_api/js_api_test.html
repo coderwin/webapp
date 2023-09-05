@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const API_KEY = "TNyXX5JCECUkYJvAg8BoOgdg80rqWkkhwO%2FYsR5kzKI4QxvVcKZVCgN7oiRPSU2LRuL8ldb%2B5mmtnBhStGnXYg%3D%3D";
+
+    //API_KEY는 Request url에 있으니까 확인해보자
+
+    async function connect() {
+        let url = "https://apis.data.go.kr/6510000/publicToiletService/getPublicToiletInfoList?serviceKey=" +
+            API_KEY + "&pageNo=1&numOfRows=10";
+
+        let response = fetch(url);
+
+        let data = (await response).json();
+        console.log("response", data);
+    }
+
+    connect();
+</script>
+</body>
+</html>

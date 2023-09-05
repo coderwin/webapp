@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/html/css_float_test02.html" value="file://$PROJECT_DIR$/src/main/webapp/html" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/jquery/jquery_dom_test01.html" value="file://$PROJECT_DIR$/src/main/webapp/jquery" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/js_array/js_array_test3.html" value="file://$PROJECT_DIR$/src/main/webapp/js_array" />
+      </map>
+    </option>
+  </component>
+</project>

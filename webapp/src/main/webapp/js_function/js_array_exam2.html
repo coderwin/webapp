@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let myArr = [5, 7, 9, 10, 5];
+
+  /**
+   * 1. myArr의 각 요소의 값에 곱하기 5한 결과로 새로운 배열을 생성
+   * 2. 1번에서 생성한 결과를 출력
+   * 3. myArr의 각요소가 짝수인지 홀수인지 판단해서 짝수이면 true, 홀수이면 false로
+   *    새로운 배열을 생성 하고 출력
+   */
+
+  let newMyArr = myArr.map(x => x * 5);
+  console.log(newMyArr);
+
+  let secondNewMyArr = myArr.map(x => x % 2 === 1);
+  console.log(secondNewMyArr);
+</script>
+</body>
+</html>

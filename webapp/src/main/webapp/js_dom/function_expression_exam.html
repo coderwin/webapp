@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script defer="defer">
+        window.onload = function () {
+            document.getElementById("first_button").onclick = function () {
+                alert("1번버튼");
+            };
+
+            document.getElementById("second_button").onclick = function () {
+                alert("2번버튼");
+            };
+
+            document.querySelector("#third_button").onclick = function () {
+                alert("3번버튼");
+            };
+
+            document.querySelector("#forth_button").onclick = myCall;
+
+            function myCall() {
+                alert("4번버튼");
+                let idIsMyForm = document.querySelector("#my_form");
+                let myFormChildNodes = idIsMyForm.children;
+
+                console.log(myFormChildNodes);
+
+                for (let i = 0; i < myFormChildNodes.length; i++) {
+                    console.log(`${myFormChildNodes[i].nodeName} :: ${myFormChildNodes[i].getAttribute("id")}`);
+                }
+
+                // myFormChildNodes.forEach(function (subjectDiv) {
+                //     console.log(`${subjectDiv.nodeName}`);
+                //     console.log(`${subjectDiv.id}`);
+                // });
+
+            }
+        };
+    </script>
+</head>
+<body>
+<form id="my_form">
+    <input id="first_button" type="button" value="1번버튼"/>
+    <input id="second_button" type="button" value="2번버튼"/>
+    <input id="third_button" type="button" value="3번버튼"/>
+    <input id="forth_button" type="button" value="4번버튼"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="myh1">
+    테스트
+</h1>
+
+<button id="mybutton">테스트버튼</button>
+<script>
+    // this는 현재 작업 중인 객체 - 어디서 실행 했는지
+    const person = {
+        name: "BTS",
+        age: 30,
+        getName: function () {
+            console.log("this => ", this);
+            console.log("name => " + this.name);
+        }
+    };
+
+    person.getName();
+
+    var myh1 = document.getElementById("myh1");
+    myh1.addEventListener("click", person.getName);
+
+
+    var mybtn = document.getElementById("mybutton");
+    mybtn.addEventListener("click", person.getName.bind(person));
+    // bind라는 메서드를 주게 되면 괄호 안에 있는 객체가 유지된다.
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 거의 안 쓴다.
+        function test1() {
+            // BOM 접근 방법
+            // var mytext = window.document.myform.id.value;   // 32번째 줄의 value 값을 불러오기
+            var mytext = myform.id.value;
+            alert(mytext);
+        }
+
+        // test2와 test3은 반드시 알아야 한다.
+        function test2() {
+            // DOM으로 접근하는 방법
+            // DOM은 대부분 id로 접근한다고 생각하면 된다.
+            let mydiv = document.getElementById("mydiv");
+            mydiv.setAttribute("style", "background-color: #a7cece;");
+        }
+
+        function test3() {
+            // DOM으로 접근하는 방법
+            // 실행하기3번 버튼을 누르면 mydiv 객체의 스타일이 변경되도록 작업
+            let myobj = document.querySelector("#mydiv");
+            myobj.style.color = "red";
+        }
+    </script>
+    <style>
+        p {
+            background-color: #a7cece;
+        }
+    </style>
+</head>
+<body>
+<h1 id="myh1">BOM</h1>
+<div id="mydiv">
+    BOM은 브라우저 객체 모델
+</div>
+
+<form name="myform">
+    <input type="text" name="id">
+    <input type="button" value="실행하기 1" onclick="test1()">
+    <input type="button" value="실행하기 2" onclick="test2()">
+    <input type="button" value="실행하기 3" onclick="test3()">
+</form>
+</body>
+</html>

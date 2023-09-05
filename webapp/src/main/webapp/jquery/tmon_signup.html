@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+<h1>티몬 회원가입</h1>
+<h2>필수 회원가입</h2>
+<form id="signup_form">
+    아이디 : <input type="text" id="id">
+</form>
+<!--<div id="warning" style="color: red">아이디는 4글자 이상이어야 합니다.</div>-->
+<script>
+
+    let data = $("<div id=\"warning\" style=\"color: red\">아이디는 4글자 이상이어야 합니다.</div>");
+
+    $(document).ready(function () {
+        let idCheck = $("#id").val();
+
+        if (idCheck.length <= 3) {
+            $("#signup_form").append(data);
+        }
+    });
+</script>
+</body>
+</html>

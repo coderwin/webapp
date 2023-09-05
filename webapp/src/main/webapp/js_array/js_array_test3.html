@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myArr = [99, 89, 100, 100, 89];
+    let myArr2 = ["javascript", "jQuery", "spring"];
+
+    function showArr(array) {
+        let sum = 0;
+        let avg = 0;
+        for (let i = 0; i < array.length; i++) {
+
+            document.write(`점수 : ${array[i]} <br>`);
+
+            sum += array[i];
+        }
+
+        avg = sum / array.length;
+
+        document.write(`<h2> 합계 : ${sum}</h2>`);
+        document.write(`<h2> 평균 : ${avg}</h2>`);
+    }
+
+    showArr(myArr);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var score = parseInt(prompt("점수를 입력하세요."));
+
+    if (score != null) {
+        if (score > 100 || score < 0) {
+            alert("점수 잘못 입력");
+        } else if (score >= 90) {
+            document.write("<h1>수</h1>");
+        } else if (score >= 80) {
+            document.write("<h1>우</h1>");
+        } else if (score >= 70) {
+            document.write("<h1>미</h1>");
+        } else if (score >= 60) {
+            document.write("<h1>양</h1>");
+        } else {
+            document.write("<h1>가</h1>");
+        }
+    } else {
+        document.write("<h1>값을 입력하세요.</h1>");
+    }
+
+
+</script>
+</body>
+</html>
