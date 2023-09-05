@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        function allcheck() {
+            alert("allcheck");
+            // 1. allchk의 상태값을 가져오기
+            let allchk = document.getElementById("allchk");
+            let allchkVal = allchk.checked;
+
+            console.log(allchkVal);
+
+            // 2. class 속성이 myfood인 객체를 모두 가져오기
+            let checkfood = document.getElementsByClassName("myfood");
+            console.log(checkfood);
+            console.log(checkfood.length);
+
+            // 3. allchk의 checked 값을 체크하여 2번에서 가져온 체크박스들에 설정
+            for (let i = 0; i < checkfood.length; i++) {
+                checkfood[i].checked = allchkVal;
+            }
+
+            function newallcheck() {
+                alert("new");
+                let allchk2 = document.querySelector("#allchk");
+                let foodArray = document.querySelectorAll(".myfood");
+
+                for (let checkbox of foodArray) {
+                    checkbox.checked = allchk2.checked;
+                }
+            }
+
+            function ckFunc() {
+                let foodArray = document.querySelectorAll(".myfood");
+            }
+        }
+    </script>
+</head>
+<body>
+<form name="cbfmt">
+    <label>아이스크림</label>
+    <input type="checkbox" name="food" value="아이스크림" id="ice" class="myfood">
+    <label>커피</label>
+    <input type="checkbox" name="food" value="커피" id="coffee" class="myfood">
+    <label>음료수</label>
+    <input type="checkbox" name="food" value="음료수" id="beverage" class="myfood">
+    <label>모두체크/해제</label>
+    <input type="checkbox" name="allchk" id="allchk" onclick="allcheck()"><br>
+
+    <input type="button" value="전송" onclick="ckFunc()">
+</form>
+<div id="result"></div>
+</body>
+</html>

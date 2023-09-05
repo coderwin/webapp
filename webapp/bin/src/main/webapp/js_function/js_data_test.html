@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let today = new Date();
+    document.write(`${today} <br>`);
+    document.write(`${today.toString()} <br>`);
+
+    let str = today.getFullYear() + "년";
+    str += (today.getMonth() + 1) + "월";
+    str += today.getDate() + "일";
+    str += today.getHours() + "시";
+    str += today.getMinutes() + "분";
+    str += today.getSeconds() + "초";
+
+    document.write(`${str}`);
+
+
+    let day = today.getDay();
+    document.write(`<h2>요일번호 : ${day} </h2>`);
+
+    let newDay = new Date();
+    newDay.setMonth(7);
+    newDay.setDate(1);
+    document.write(`${newDay} <br>`);
+
+</script>
+</body>
+</html>

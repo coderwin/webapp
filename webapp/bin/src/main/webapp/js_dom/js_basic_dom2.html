@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script defer="defer" src="../js/domtest.js"></script>
+    <!--    deper 라는 속성은 html 문서를 다 읽은 후에 자바스크립트를 실행하라는 의미이다.-->
+</head>
+<body>
+<div class="my_box">my dom test</div>
+<div id="my_div">my dom test</div>
+<div id="item">oracle</div>
+<div class="item">java</div>
+<div class="item">javascript</div>
+<div class="item">sevlet & jsp</div>
+
+<script>
+    // 클래스명이 item인 모든 dom 요소를 구하기
+
+    let items = document.querySelectorAll(".item");
+    console.log(items.length); // items의 갯수 세아리기
+
+
+    // forEach를 통해서 item 요소 접근하기  => 매개변수는 js 엔진이 자동으로 전달
+    items.forEach(function (subjectDiv, i, test) {
+        console.log(`${subjectDiv.textContent} : ${i}, ${test}`);
+        subjectDiv.classList.add(`subject1${i + 1}`);
+
+    });
+</script>
+</body>
+</html>

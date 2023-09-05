@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #a7cece;
+        }
+    </style>
+
+    <script>
+        function showData(zipCode, address) {
+            alert(`우편번호와 집주소 : ${zipCode}, ${address}`);
+            // 팝업창에서 오픈될 때
+            opener.document.myform.zipcode.value = zipCode;
+            opener.document.myform.address.value = address;
+            window.close();
+        }
+
+        function getOpenerValue() {
+            // 팝업창의 텍스트 상자
+            document.getElementById("myid").value = opener.document.myform.id.value;
+        }
+    </script>
+</head>
+<body>
+<form onload="getOpenerValue()">
+    <input type="text" id="myid">
+    <input type="text" id="addr">
+    <input type="submit" value="검색">
+</form>
+<a href="javascript:showData('111-111', '서울시 구로동')">구로동</a>
+<a href="javascript:showData('111-222', '서울시 신림동')">신림동</a>
+<a href="javascript:showData('111-333', '서울시 독산동')">독산동</a>
+<a href="javascript:showData('111-444', '서울시 압구정동')">압구정동</a>
+</body>
+</html>
