@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function calc() {
+            let count = document.getElementById("num").value;
+            let price = count * 12900 * 0.9;
+            document.write(`${price}`);
+        }
+    </script>
+</head>
+<body>
+<span>
+  수량 : <input id="num" type="text" onkeyup="calc()">
+</span>
+</body>
+</html>
