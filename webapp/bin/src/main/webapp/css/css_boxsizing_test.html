@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        border: solid 3px black;
+    }
+
+    .box:first-child {
+        /*    box 클래스의 첫번째 자식 노드*/
+        background-color: #a0f090;
+        border-color: aquamarine;
+        border-width: 10px;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+<div class="box">
+    box-sizing(border-box)
+</div>
+
+<div class="box">
+    box-sizing(content-box - default)
+</div>
+</body>
+</html>

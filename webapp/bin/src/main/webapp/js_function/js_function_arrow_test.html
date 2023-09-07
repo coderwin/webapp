@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_function_arrow_test</title>
+</head>
+<body>
+<script>
+    var myfunc = function () {
+        return "화살표함수연습(일반표현식)";
+    };
+
+    var result1 = myfunc();
+    console.log(result1);
+
+    var myfunc2 = () => {
+        return "화살표 함수 연습(화살표함수)";
+    }
+    // 매개변수가 있다면 괄호 안에 매개변수를 써주면 된다.
+    console.log(myfunc2());
+
+    // 리턴이 한 줄이 전부인 경우
+    var myfunc3 = () => "화살표 함수 연습(리턴이 한줄인 함수)";
+    console.log(myfunc3());
+
+    // 매개변수가 있는 함수
+    var myfunc4 = (name, age) => {
+        document.write("화살표 함수 연습(리턴이 한줄인 함수)" + name + " " + age);
+        return "종료";
+    }
+
+    console.log(myfunc4("김수용", 20));
+
+    let subject = ["java", "spring", "javascript", "css", "html"];
+
+    console.log("==============================================");
+
+    subject.forEach();
+
+</script>
+</body>
+</html>

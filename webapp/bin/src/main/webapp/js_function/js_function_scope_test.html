@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_function_scope_test</title>
+    <script>
+        // 1. function 밖 즉, 스크립트 위에서 변수를 선언하는 경우 : var 키워드 없이 선언하면 전역변수가 된다.
+
+        num1 = 100;
+
+        // 4. function 밖에서 var 키워드를 사용해서 변수를 선언해도 전역변수가 된다.
+        var num4 = 400;
+
+        function test1() {
+            // 함수 내부에서 변수를 선언하는 경우 : var 키워드 없이 사용된다면 전역변수가 된다.
+            // 반드시 변수가 선언된 함수가 먼저 호출되어 실행되어야 한다.
+            // 주로 사용되는 경우는
+            //                 먼저 선언된 함수 내부에서 만들어진 값이 뒤에 선언된 함수에서 사용돼야 할 경우에 쓴다.
+
+            //3. var 키워드를 붙여서 함수 내부에서 변수를 선언하는 경우에는 그 함수에서만 사용하는 지역변수로 선언된다.
+            num2 = 200;
+
+            let num3 = 300;
+            document.write("test에서 num1을 사용할수 있나? => " + num1 + "<br>");
+            document.write("test에서 num2을 사용할수 있나? => " + num2 + "<br>");
+            document.write("test에서 num3을 사용할수 있나? => " + num3 + "<br>");
+        }
+
+        function test2() {
+            document.write("test에서 num1을 사용할수 있나? => " + num1 + "<br>");
+            document.write("test에서 num1을 사용할수 있나? => " + num2 + "<br>");
+        }
+    </script>
+</head>
+<body>
+<script>
+    test1();
+    document.write(`<hr>`);
+
+    test2();
+    document.write(`<hr>`);
+    document.write(`body에서 num1을 사용 => ${num1}<br>`);
+    document.write(`body에서 num1을 사용 => ${num2}<br>`);
+
+</script>
+</body>
+</html>
